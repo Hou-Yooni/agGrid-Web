@@ -11,8 +11,17 @@
   border-radius: 10px;
 }
 
+  html, body, #app {
+    height: 100%;
+  }
+
+  #app {
+    margin-top: 0px !important;
+    display: flex;
+    align-items: center;
+  }
+
 body {
-  height: 100%;
   background: #ccc;
   background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
   background-size: cover;
@@ -153,15 +162,6 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-  html, body, #app {
-    height: 100%;
-  }
-
-  #app {
-    margin-top: 0px !important;
-    display: flex;
-    align-items: center;
-  }
   
   .content {
     padding-top: 30px;
