@@ -1,0 +1,194 @@
+/* width */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: rgba(1, 2, 3, 0.4);
+  border-radius: 10px;
+}
+
+body {
+  height: 100%;
+  background: #ccc;
+  background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.video-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  background: rgba(16, 18, 27, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  padding-top: 0;
+  border-radius: 14px;
+}
+
+.content h5 {
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 58px;
+  width: 100%;
+  border-bottom: 1px solid rgba(113, 119, 144, 0.25);
+  padding: 0 30px;
+  white-space: nowrap;
+}
+
+.menu-circle {
+  width: 12px;
+  height: 12px;
+  background-color: #f96057;
+  border-radius: 50%;
+  box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
+  margin-right: 195px;
+  flex-shrink: 0;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu a {
+  padding: 0px 30px;
+  text-decoration: none;
+  color: rgba(113, 119, 144, 0.78);
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.header-menu a.is-active,
+.header-menu a:hover {
+  color: #fff;
+}
+
+.notify {
+  position: relative;
+}
+.notify::before {
+  content: "";
+  position: absolute;
+  background-color: #5fcf65;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  right: 20px;
+  top: 0px;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 40px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.header-profile svg {
+  width: 18px;
+  color: #f9fafb;
+  flex-shrink: 0;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification-number {
+  position: absolute;
+  background-color: #3a6df0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  right: -6px;
+  top: -6px;
+}
+
+.notification + svg {
+  margin-left: 22px;
+}
+
+.profile-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #f9fafb;
+  margin-left: 22px;
+}
+
+.footer {
+  position: absolute;
+  right: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  bottom: 6px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 991px) {
+  html, body, #app {
+    height: 100%;
+  }
+
+  #app {
+    margin-top: 0px !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    padding-top: 30px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .header-menu {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-circle {
+    margin-bottom: 10px;
+  }
+
+  .header-profile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header-menu {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
